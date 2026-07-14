@@ -1,32 +1,41 @@
 /* ============================================================
-   VIABONI — Design Tokens — "Noir & Braise"
+   VIABONI — Design Tokens — "Blanc & Braise"
+   Palette sampled directly from the Viaboni brand artwork:
+   maroon #631B0C + white #FEFDFD.
    ============================================================ */
 :root {
   /* Core palette */
-  --void: #080605;
-  --bg: #0B0806;
-  --bg-2: #150F0B;
-  --surface: #1C140F;
-  --surface-2: #241A13;
+  --void: #2A0F08;
+  --maroon: #631B0C;
+  --bg: #FFFFFF;
+  --bg-2: #631B0C;
+  --surface: #FFF9F6;
+  --surface-2: #F7E9E0;
 
-  --ember: #FF5A1F;
-  --ember-light: #FF8A4D;
-  --ember-dim: #C93D0F;
-  --gold: #D9A84E;
-  --gold-light: #E8C378;
+  --ember: #A8340F;
+  --ember-light: #C94A1D;
+  --ember-dim: #7A2308;
+  --gold: #B9832E;
+  --gold-light: #D9A84E;
+  --tag-color: var(--gold);
 
-  /* Text */
-  --text: #F5EEE3;
-  --text-dim: rgba(245, 238, 227, 0.68);
-  --text-muted: rgba(245, 238, 227, 0.44);
+  /* Text (default: on white/cream sections) */
+  --text: #241009;
+  --text-dim: rgba(36, 16, 9, 0.68);
+  --text-muted: rgba(36, 16, 9, 0.46);
+
+  /* Text on maroon/dark sections */
+  --paper-text: #FEFDFD;
+  --paper-text-dim: rgba(254, 253, 253, 0.75);
+  --paper-text-muted: rgba(254, 253, 253, 0.5);
 
   /* Lines & shadows */
-  --line: rgba(255, 90, 31, 0.16);
-  --line-hover: rgba(255, 90, 31, 0.42);
-  --line-gold: rgba(217, 168, 78, 0.28);
-  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.5);
-  --shadow-card-hover: 0 30px 70px rgba(255, 90, 31, 0.18), 0 24px 60px rgba(0, 0, 0, 0.55);
-  --shadow-dark: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --line: rgba(99, 27, 12, 0.18);
+  --line-hover: rgba(99, 27, 12, 0.45);
+  --line-gold: rgba(185, 131, 46, 0.35);
+  --shadow-card: 0 20px 50px rgba(99, 27, 12, 0.14);
+  --shadow-card-hover: 0 26px 60px rgba(168, 52, 15, 0.2), 0 20px 50px rgba(99, 27, 12, 0.16);
+  --shadow-dark: 0 20px 50px rgba(42, 15, 8, 0.35);
 
   /* Type */
   --font-title: 'Playfair Display', serif;
@@ -35,6 +44,23 @@
   /* Easing */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+/* Sections that stay on the brand maroon (mirrors the red blocks in the
+   Viaboni artwork) — flip text/line/surface tokens to their light variants
+   so the shared component rules below stay legible without duplicating them. */
+.site-header, .mobile-nav-overlay, .hero, .philosophy-section,
+.carte-section, .order-section, .contact-section, .site-footer {
+  --text: var(--paper-text);
+  --text-dim: var(--paper-text-dim);
+  --text-muted: var(--paper-text-muted);
+  --line: rgba(255, 255, 255, 0.22);
+  --line-hover: rgba(255, 255, 255, 0.5);
+  --line-gold: rgba(217, 168, 78, 0.4);
+  --surface: rgba(255, 255, 255, 0.07);
+  --surface-2: rgba(255, 255, 255, 0.12);
+  --ember: #FF6B35;
+  --tag-color: var(--gold-light);
 }
 
 /* ============================================================
@@ -69,7 +95,7 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 svg { display: block; }
 
-::selection { background: var(--ember); color: var(--void); }
+::selection { background: var(--ember); color: var(--paper-text); }
 
 /* Grain overlay */
 .grain-overlay {
@@ -150,8 +176,8 @@ svg { display: block; }
 
 .btn-accent {
   background: linear-gradient(135deg, var(--ember) 0%, var(--ember-dim) 100%);
-  color: var(--void);
-  box-shadow: 0 10px 30px rgba(255, 90, 31, 0.4);
+  color: var(--paper-text);
+  box-shadow: 0 10px 30px rgba(168, 52, 15, 0.4);
 }
 .btn-accent:hover { background: linear-gradient(135deg, var(--ember-light) 0%, var(--ember) 100%); }
 
@@ -172,7 +198,7 @@ svg { display: block; }
   font-weight: 700;
   transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 }
-.btn-outline-dark:hover { background: var(--ember); color: var(--void); border-color: var(--ember); }
+.btn-outline-dark:hover { background: var(--ember); color: var(--paper-text); border-color: var(--ember); }
 
 .magnetic-el { will-change: transform; }
 
@@ -180,10 +206,9 @@ svg { display: block; }
    DIVIDER (formerly checker-strip) — glowing ember seam
    ============================================================ */
 .checker-strip {
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, var(--ember) 20%, var(--gold) 50%, var(--ember) 80%, transparent 100%);
-  opacity: 0.6;
-  box-shadow: 0 0 24px 2px rgba(255, 90, 31, 0.35);
+  height: 10px;
+  background-image: repeating-conic-gradient(var(--maroon) 0% 25%, #FFFFFF 0% 50%);
+  background-size: 10px 10px;
 }
 
 /* ============================================================
@@ -206,14 +231,14 @@ svg { display: block; }
   gap: 20px;
   padding: 10px 12px 10px 22px;
   border-radius: 64px;
-  background: rgba(8, 6, 5, 0.32);
+  background: rgba(42, 15, 8, 0.4);
   backdrop-filter: blur(10px) saturate(140%);
   border: 1px solid transparent;
   transition: background 0.5s var(--ease-out), border-color 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
 }
 
 .site-header.scrolled .nav-pill {
-  background: rgba(8, 6, 5, 0.78);
+  background: rgba(42, 15, 8, 0.85);
   backdrop-filter: blur(20px) saturate(160%);
   border-color: var(--line);
   box-shadow: var(--shadow-dark), inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -249,7 +274,7 @@ svg { display: block; }
   font-family: var(--font-body);
   transition: color 0.25s var(--ease-out), background 0.25s var(--ease-out);
 }
-.main-nav a:hover { color: var(--text); background: rgba(255, 90, 31, 0.1); }
+.main-nav a:hover { color: var(--text); background: rgba(255, 107, 53, 0.14); }
 
 .nav-cta { padding: 11px 24px; font-size: 12px; letter-spacing: 0.5px; }
 
@@ -322,15 +347,15 @@ svg { display: block; }
   position: absolute;
   inset: -6% -6%;
   background:
-    radial-gradient(circle at 28% 24%, rgba(255, 90, 31, 0.28), transparent 45%),
+    radial-gradient(circle at 28% 24%, rgba(255, 107, 53, 0.28), transparent 45%),
     radial-gradient(circle at 76% 78%, rgba(217, 168, 78, 0.14), transparent 50%),
-    linear-gradient(160deg, #0B0806 0%, #150F0B 55%, #060403 100%);
+    linear-gradient(160deg, #631B0C 0%, #4A1409 55%, #2A0F08 100%);
   will-change: transform;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.4), transparent 60%);
+  background: radial-gradient(circle at 50% 100%, rgba(42, 15, 8, 0.5), transparent 60%);
 }
 .hero-content { position: relative; z-index: 2; }
 .hero-logo {
@@ -361,7 +386,7 @@ svg { display: block; }
   margin-bottom: 36px;
 }
 .badge {
-  background: rgba(255, 90, 31, 0.08);
+  background: rgba(255, 107, 53, 0.12);
   border: 1px solid var(--line-hover);
   color: var(--text);
   padding: 8px 18px;
@@ -429,7 +454,7 @@ svg { display: block; }
 .philosophy-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 6, 5, 0.88), rgba(8, 6, 5, 0.74) 50%, rgba(8, 6, 5, 0.92));
+  background: linear-gradient(180deg, rgba(42, 15, 8, 0.88), rgba(42, 15, 8, 0.74) 50%, rgba(42, 15, 8, 0.92));
 }
 .philosophy-content { position: relative; z-index: 2; text-align: center; padding: 100px 24px; }
 .philosophy-quote {
@@ -451,7 +476,7 @@ svg { display: block; }
    ============================================================ */
 .placeholder-photo {
   position: relative;
-  background: repeating-linear-gradient(135deg, #2A1D14 0 18px, #1C130D 18px 36px);
+  background: repeating-linear-gradient(135deg, #F4E3D9 0 18px, #ECD5C6 18px 36px);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -474,12 +499,22 @@ svg { display: block; }
   bottom: 10px;
   left: 10px;
   right: 10px;
-  background: rgba(8, 6, 5, 0.78);
-  color: var(--text);
+  background: rgba(42, 15, 8, 0.82);
+  color: var(--paper-text);
   font-size: 0.68rem;
   padding: 4px 10px;
   border-radius: 6px;
   text-align: center;
+}
+
+/* Real photo fill — overrides the striped filler + emoji/label */
+.placeholder-photo.has-photo {
+  background-size: cover;
+  background-position: center;
+}
+.placeholder-photo.has-photo::before,
+.placeholder-photo.has-photo::after {
+  content: none;
 }
 
 /* ============================================================
@@ -500,7 +535,7 @@ svg { display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 15% 0%, rgba(255, 90, 31, 0.08), transparent 55%);
+  background: radial-gradient(ellipse at 15% 0%, rgba(255, 107, 53, 0.14), transparent 55%);
   pointer-events: none;
 }
 .carte-section > .container, .contact-section > .container { position: relative; z-index: 1; }
@@ -563,7 +598,7 @@ svg { display: block; }
   font-style: italic;
   font-size: 1.6rem;
   color: var(--gold-light);
-  background: rgba(8, 6, 5, 0.72);
+  background: rgba(42, 15, 8, 0.72);
   border: 1px solid var(--line-gold);
   backdrop-filter: blur(6px);
   padding: 10px 26px;
@@ -572,7 +607,7 @@ svg { display: block; }
 .tag {
   background: var(--surface-2);
   border: 1px solid var(--line);
-  color: var(--gold-light);
+  color: var(--tag-color);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 4px 12px;
@@ -607,6 +642,16 @@ svg { display: block; }
 .carte-image.active { opacity: 1; transform: scale(1); }
 
 .carte-list { display: flex; flex-direction: column; }
+.carte-category-title {
+  font-family: var(--font-title);
+  font-style: italic;
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  margin: 40px 0 4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line-gold);
+}
+.carte-list > .carte-category-title:first-child { margin-top: 0; }
 .carte-row {
   padding: 34px 0;
   border-bottom: 1px solid var(--line);
@@ -683,7 +728,7 @@ svg { display: block; }
   top: 10px; right: 10px;
   font-size: 0.6rem;
   background: var(--ember);
-  color: var(--void);
+  color: var(--paper-text);
   padding: 2px 9px;
   border-radius: 50px;
   opacity: 0.9;
@@ -730,7 +775,7 @@ svg { display: block; }
   font-family: var(--font-title);
   font-style: italic;
   font-size: 3.2rem;
-  color: var(--gold-light);
+  color: var(--gold);
 }
 .stars { color: var(--ember); font-size: 1.3rem; letter-spacing: 2px; }
 .stars.small { font-size: 0.9rem; }
@@ -771,7 +816,7 @@ svg { display: block; }
   width: 40px; height: 40px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--ember), var(--ember-dim));
-  color: var(--void);
+  color: var(--paper-text);
   display: flex; align-items: center; justify-content: center;
   font-weight: 800;
   font-family: var(--font-title);
@@ -790,7 +835,7 @@ svg { display: block; }
 }
 .about-photo { min-height: 380px; will-change: transform; }
 .about-text p { margin-bottom: 18px; color: var(--text-dim); }
-.about-text strong { color: var(--gold-light); }
+.about-text strong { color: var(--gold); }
 
 /* ============================================================
    CONTACT
@@ -807,13 +852,13 @@ svg { display: block; }
 .info-block p, .info-block a { color: var(--text-dim); }
 .info-block a:hover { color: var(--text); }
 .placeholder-text {
-  color: var(--ember-light);
+  color: var(--ember);
   font-size: 0.82rem;
   font-style: italic;
 }
 .socials { display: flex; gap: 14px; }
 .socials a {
-  border: 1px solid rgba(245, 238, 227, 0.24);
+  border: 1px solid rgba(254, 253, 253, 0.28);
   padding: 9px 20px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -823,7 +868,7 @@ svg { display: block; }
   transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 }
 .socials a svg { width: 15px; height: 15px; }
-.socials a:hover { background: rgba(255, 90, 31, 0.1); border-color: var(--line-hover); }
+.socials a:hover { background: rgba(255, 107, 53, 0.14); border-color: var(--line-hover); }
 
 .contact-map {
   min-height: 340px;

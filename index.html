@@ -36,7 +36,7 @@
 <header class="site-header" id="header">
   <div class="nav-pill">
     <a href="#hero" class="logo">
-      <img src="assets/logo-viaboni.png" alt="Viaboni" class="logo-img">
+      <img src="assets/logo-viaboni-clean.png" alt="Viaboni" class="logo-img">
     </a>
     <nav class="main-nav" id="main-nav">
       <a href="#signatures">Signatures</a>
@@ -66,11 +66,11 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-bg has-photo" id="hero-bg" style="background-image: linear-gradient(rgba(42,15,8,.55), rgba(42,15,8,.8)), url('assets/stock/oven-flames-crop.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <p class="section-label light" data-hero-el>Pizzeria napolitaine · Sannois</p>
-    <h1 class="hero-logo line-mask"><span class="line-inner"><img src="assets/logo-viaboni.png" alt="Viaboni" class="hero-logo-img"></span></h1>
+    <h1 class="hero-logo line-mask"><span class="line-inner"><img src="assets/logo-viaboni-clean.png" alt="Viaboni" class="hero-logo-img"></span></h1>
     <p class="hero-slogan" data-hero-el>Pizzas &amp; Panozzis napolitains au feu de bois, à Sannois</p>
     <div class="hero-badges">
       <span class="badge" data-hero-el>★ 4,7 sur 101 avis Google</span>
@@ -91,7 +91,7 @@
 
 <!-- PHILOSOPHIE -->
 <section class="philosophy-section" id="philosophie">
-  <div class="philosophy-bg placeholder-photo" data-parallax data-label="Photo four à bois allumé"></div>
+  <div class="philosophy-bg placeholder-photo has-photo" data-parallax style="background-image: url('assets/stock/dough1.jpg')"></div>
   <div class="philosophy-scrim"></div>
   <div class="container philosophy-content">
     <p class="section-label light">Notre philosophie</p>
@@ -109,38 +109,38 @@
   </div>
 
   <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Viaboni Spéciale">
-      <span class="signature-price">13 €</span>
+    <div class="signature-media placeholder-photo has-photo" style="background-image: url('assets/photo-margherita-real.png')">
+      <span class="signature-price">11 €</span>
     </div>
     <div class="signature-info">
       <span class="signature-index">01</span>
-      <h3>Viaboni Spéciale</h3>
-      <p>Sauce tomate, mozzarella, viande hachée halal, poivrons, olives — la recette signature de la maison.</p>
-      <div class="tags"><span class="tag">Halal</span><span class="tag">Signature</span></div>
-    </div>
-  </article>
-
-  <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Margherita">
-      <span class="signature-price">9 €</span>
-    </div>
-    <div class="signature-info">
-      <span class="signature-index">02</span>
       <h3>Margherita</h3>
-      <p>Sauce tomate, mozzarella, basilic frais — le grand classique napolitain, sans artifice.</p>
+      <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, olives, basilic — le grand classique napolitain, sans artifice.</p>
       <div class="tags"><span class="tag">Fait maison</span></div>
     </div>
   </article>
 
   <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Panozzi maison">
-      <span class="signature-price">6,50 €</span>
+    <div class="signature-media placeholder-photo has-photo" style="background-image: url('assets/viaboni-panuozzi.webp')">
+      <span class="signature-price">12,90 €</span>
+    </div>
+    <div class="signature-info">
+      <span class="signature-index">02</span>
+      <h3>Panuozzo à composer</h3>
+      <p>Pain artisanal cuit au feu de bois. 1 base (pesto, pesto roquette ou crème truffée), 2 à 3 légumes, 1 fromage et 1 à 2 charcuteries au choix.</p>
+      <div class="tags"><span class="tag">Halal</span><span class="tag">Signature</span></div>
+    </div>
+  </article>
+
+  <article class="signature-item fold-3d">
+    <div class="signature-media placeholder-photo has-photo" style="background-image: url('assets/photo-veggie-real.png')">
+      <span class="signature-price">13 €</span>
     </div>
     <div class="signature-info">
       <span class="signature-index">03</span>
-      <h3>Panozzi maison</h3>
-      <p>Pain artisanal cuit au feu de bois, garniture jambon et crudités, servi à l'italienne, froid, pour révéler la fraîcheur des produits.</p>
-      <div class="tags"><span class="tag">Halal</span><span class="tag">Spécialité</span></div>
+      <h3>Végétarien</h3>
+      <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, champignons, poivrons et aubergines cuisinés, tomates cerises.</p>
+      <div class="tags"><span class="tag">Fait maison</span><span class="tag">Végétarien</span></div>
     </div>
   </article>
 </section>
@@ -154,34 +154,119 @@
 
     <div class="carte-layout">
       <div class="carte-sticky">
-        <div class="carte-image placeholder-photo active" data-item="reine" data-label="Photo Reine"></div>
-        <div class="carte-image placeholder-photo" data-item="veggie" data-label="Photo Végétarienne feu de bois"></div>
-        <div class="carte-image placeholder-photo" data-item="fromages" data-label="Photo 4 Fromages"></div>
+        <div class="carte-image placeholder-photo has-photo active" data-item="tomate" style="background-image: url('assets/photo-margherita-real.png')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="signatures" style="background-image: url('assets/photo-veggie-real.png')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="panuozzo" style="background-image: url('assets/viaboni-panuozzi.webp')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="regina" style="background-image: url('assets/photo-regina-real.webp')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="chorizo" style="background-image: url('assets/photo-chorizo-real.webp')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="quatre-fromages" style="background-image: url('assets/photo-4fromages-real.png')"></div>
+        <div class="carte-image placeholder-photo has-photo" data-item="pesto" style="background-image: url('assets/photo-pesto-real.png')"></div>
       </div>
       <div class="carte-list">
-        <article class="carte-row is-active" data-target="reine">
-          <div class="carte-row-head">
-            <h3>Reine</h3>
-            <span class="price">11 €</span>
-          </div>
-          <p>Sauce tomate, mozzarella, jambon, champignons</p>
-          <div class="tags"><span class="tag">Halal</span></div>
+        <h3 class="carte-category-title">Base Tomate</h3>
+        <article class="carte-row is-active" data-target="tomate">
+          <div class="carte-row-head"><h3>Margherita</h3><span class="price">11 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, olives, basilic</p>
         </article>
-        <article class="carte-row" data-target="veggie">
-          <div class="carte-row-head">
-            <h3>Végétarienne feu de bois</h3>
-            <span class="price">12 €</span>
-          </div>
-          <p>Sauce tomate, mozzarella, aubergines et poivrons grillés, champignons</p>
-          <div class="tags"><span class="tag">Fait maison</span><span class="tag">Végétarien</span></div>
+        <article class="carte-row" data-target="regina">
+          <div class="carte-row-head"><h3>Regina</h3><span class="price">13 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, champignons cuisinés, jambon blanc, basilic</p>
         </article>
-        <article class="carte-row" data-target="fromages">
-          <div class="carte-row-head">
-            <h3>4 Fromages</h3>
-            <span class="price">12 €</span>
-          </div>
-          <p>Mozzarella, chèvre, emmental, bleu</p>
-          <div class="tags"><span class="tag">Fait maison</span></div>
+        <article class="carte-row" data-target="tomate">
+          <div class="carte-row-head"><h3>Végétarien</h3><span class="price">13 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, champignons cuisinés, poivrons cuisinés, aubergines cuisinées, tomates cerises</p>
+          <div class="tags"><span class="tag">Végétarien</span></div>
+        </article>
+        <article class="carte-row" data-target="tomate">
+          <div class="carte-row-head"><h3>Thon</h3><span class="price">14 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, thon, olives, tomates cerises, basilic</p>
+        </article>
+        <article class="carte-row" data-target="tomate">
+          <div class="carte-row-head"><h3>Napolitaine</h3><span class="price">14 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, anchois, câpres</p>
+        </article>
+        <article class="carte-row" data-target="quatre-fromages">
+          <div class="carte-row-head"><h3>4 Fromages</h3><span class="price">14 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, chèvre, provolone, bleu</p>
+        </article>
+        <article class="carte-row" data-target="tomate">
+          <div class="carte-row-head"><h3>Campionne</h3><span class="price">14 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, viande hachée, champignons cuisinés, olives, basilic</p>
+        </article>
+        <article class="carte-row" data-target="chorizo">
+          <div class="carte-row-head"><h3>Chorizo</h3><span class="price">15 €</span></div>
+          <p>Sauce tomate San Marzano DOP, mozzarella fior di latte, champignons cuisinés, olives, chorizo du boucher</p>
+        </article>
+
+        <h3 class="carte-category-title">Signatures</h3>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Burratina</h3><span class="price">9 €</span></div>
+          <p>Sauce tomate, roquette, burrata, basilic</p>
+          <div class="tags"><span class="tag">Signature</span></div>
+        </article>
+        <article class="carte-row" data-target="pesto">
+          <div class="carte-row-head"><h3>Pesto</h3><span class="price">13 €</span></div>
+          <p>Crème pesto, mozzarella fior di latte, burrata, bacon de veau</p>
+          <div class="tags"><span class="tag">Signature</span></div>
+        </article>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Tartufo</h3><span class="price">10 €</span></div>
+          <p>Crème de truffe, mozzarella fior di latte, champignons cuisinés, roquette</p>
+          <div class="tags"><span class="tag">Signature</span></div>
+        </article>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Bresaola</h3><span class="price">13 €</span></div>
+          <p>Base tomate, mozzarella fior di latte, bresaola, filet d'huile d'olive, roquette, copeaux de parmesan</p>
+          <div class="tags"><span class="tag">Signature</span></div>
+        </article>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Pastrami</h3><span class="price">12 €</span></div>
+          <p>Sauce tomate, mozzarella fior di latte, pastrami, tomates cerises, crème balsamique, roquette, copeaux de parmesan</p>
+          <div class="tags"><span class="tag">Signature</span></div>
+        </article>
+
+        <h3 class="carte-category-title">Base Blanche</h3>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Pollo</h3><span class="price">10 €</span></div>
+          <p>Mozzarella fior di latte, champignons, jambon de poulet aux herbes, pommes de terre sautées, basilic</p>
+        </article>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Saumon fumé d'éleveur</h3><span class="price">10 €</span></div>
+          <p>Mozzarella fior di latte, saumon fumé frais, stracciatella, tomates cerises, basilic</p>
+        </article>
+        <article class="carte-row" data-target="signatures">
+          <div class="carte-row-head"><h3>Chèvre &amp; Miel</h3><span class="price">10 €</span></div>
+          <p>Base blanche, mozzarella fior di latte, chèvre, miel, basilic</p>
+        </article>
+
+        <h3 class="carte-category-title">Panuozzo</h3>
+        <article class="carte-row" data-target="panuozzo">
+          <div class="carte-row-head"><h3>Panuozzo à composer</h3><span class="price">12,90 €</span></div>
+          <p>1 base : pesto, pesto roquette ou crème truffée · 2 à 3 légumes cuisinés au choix · 1 fromage (stracciatella, copeaux de parmesan ou provola) · 1 ou 2 charcuteries (bacon de veau, jambon blanc, jambon de veau, bresaola, pastrami ; speck ou coppa de León : +2 €) · sauce : huile d'olive ou vinaigre balsamique</p>
+          <div class="tags"><span class="tag">Halal</span><span class="tag">Signature</span></div>
+        </article>
+
+        <h3 class="carte-category-title">Salade</h3>
+        <article class="carte-row" data-target="panuozzo">
+          <div class="carte-row-head"><h3>Salade à composer</h3><span class="price placeholder-text">Prix à confirmer</span></div>
+          <p>Même formule que le panuozzo : 1 base (mâche ou roquette), légumes, fromage et charcuterie au choix</p>
+        </article>
+
+        <h3 class="carte-category-title">Desserts</h3>
+        <article class="carte-row" data-target="desserts">
+          <div class="carte-row-head"><h3>Pizza Nocciolata</h3><span class="price">7 €</span></div>
+        </article>
+        <article class="carte-row" data-target="desserts">
+          <div class="carte-row-head"><h3>Tiramisu café</h3><span class="price">5 €</span></div>
+        </article>
+        <article class="carte-row" data-target="desserts">
+          <div class="carte-row-head"><h3>Tiramisu pistache</h3><span class="price">6 €</span></div>
+        </article>
+        <article class="carte-row" data-target="desserts">
+          <div class="carte-row-head"><h3>Sorbet italien citron</h3><span class="price">6 €</span></div>
+        </article>
+        <article class="carte-row" data-target="desserts">
+          <div class="carte-row-head"><h3>Sorbet italien pistache-chocolat</h3><span class="price">7 €</span></div>
         </article>
       </div>
     </div>
@@ -228,10 +313,10 @@
     <p class="section-subtitle">Le feu qui crépite, la salle conviviale, le geste artisanal — un aperçu de l'atmosphère de la maison.</p>
 
     <div class="gallery-grid">
-      <div class="gallery-item placeholder-photo" data-label="Le four à bois en action"></div>
+      <div class="gallery-item placeholder-photo has-photo" style="background-image: url('assets/stock/oven-flames-crop.jpg')"></div>
       <div class="gallery-item placeholder-photo" data-label="La salle conviviale"></div>
-      <div class="gallery-item placeholder-photo" data-label="Pizza fraîchement sortie du four"></div>
-      <div class="gallery-item placeholder-photo" data-label="La pâte pétrie à la main"></div>
+      <div class="gallery-item placeholder-photo has-photo" style="background-image: url('assets/photo-margherita-box-real.webp')"></div>
+      <div class="gallery-item placeholder-photo has-photo" style="background-image: url('assets/stock/dough1.jpg')"></div>
       <div class="gallery-item placeholder-photo" data-label="La terrasse"></div>
       <div class="gallery-item placeholder-photo" data-label="L'équipe Viaboni au travail"></div>
     </div>
@@ -241,7 +326,7 @@
 <!-- NOTRE HISTOIRE -->
 <section class="section about-section" id="histoire">
   <div class="container about-grid">
-    <div class="about-photo placeholder-photo" data-parallax data-label="Photo four à bois"></div>
+    <div class="about-photo placeholder-photo has-photo" data-parallax style="background-image: url('assets/viaboni-panuozzi.webp')"></div>
     <div class="about-text">
       <p class="section-label left">Savoir-faire</p>
       <h2 class="section-title left line-mask"><span class="line-inner">Notre histoire</span></h2>
@@ -333,9 +418,8 @@
           <div>
             <h3>Horaires</h3>
             <p>
-              Ouvert du mardi au dimanche<br>
-              <span class="placeholder-text">[Horaires détaillés à confirmer — exemple : 11h30–14h00 / 18h30–22h30]</span><br>
-              Fermé le lundi <span class="placeholder-text">[à confirmer]</span>
+              Ouverture à partir de 11h30<br>
+              <span class="placeholder-text">[Horaires complets et jour de fermeture à confirmer]</span>
             </p>
           </div>
         </div>
@@ -368,7 +452,7 @@
   <div class="checker-strip"></div>
   <div class="container footer-inner">
     <div class="footer-logo">
-      <img src="assets/logo-viaboni.png" alt="Viaboni" class="footer-logo-img">
+      <img src="assets/logo-viaboni-clean.png" alt="Viaboni" class="footer-logo-img">
     </div>
     <p>22 bis Boulevard Maurice Berteaux, 95110 Sannois &middot; <a href="tel:0745314249">07 45 31 42 49</a></p>
     <p class="footer-legal">Pizzeria napolitaine au feu de bois &mdash; Pizzas et panozzis 100% halal &middot; © <span id="year"></span> Viaboni. Tous droits réservés.</p>

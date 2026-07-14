@@ -1,0 +1,17 @@
+serve.ps1
+
+# Raw source photos / internal docs (already cropped into the *-real.* assets actually used on the site)
+assets/1.webp
+assets/2.webp
+assets/3.webp
+assets/4.webp
+assets/download.png
+assets/carte viaboni.webp
+assets/lettre viaboni.webp
+assets/viaboni logo.webp
+assets/logo-viaboni.png
+assets/photo-panuozzo-real-1.png
+assets/photo-panuozzo-real-2.png
+assets/stock/dough2.jpg
+assets/stock/oven1.jpg
+assets/stock/oven2.jpg

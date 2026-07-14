@@ -224,14 +224,18 @@ svg { display: block; }
   align-items: center;
   gap: 8px;
 }
-.logo-flame-icon { color: var(--ember); width: 20px; height: 20px; flex-shrink: 0; }
-.logo-text, .hero-logo, .footer-logo {
+.logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.hero-logo, .footer-logo {
   font-family: var(--font-title);
   color: var(--text);
   letter-spacing: 1px;
   font-weight: 800;
 }
-.logo-text { font-size: 1.3rem; }
 
 .main-nav { display: flex; gap: 4px; }
 .main-nav a {
@@ -330,13 +334,14 @@ svg { display: block; }
 }
 .hero-content { position: relative; z-index: 2; }
 .hero-logo {
-  font-size: clamp(2.8rem, 9vw, 6.2rem);
-  color: var(--text);
   margin-bottom: 14px;
-  letter-spacing: 1px;
-  font-weight: 800;
 }
-.logo-flame { color: var(--ember); }
+.hero-logo-img {
+  width: clamp(240px, 34vw, 520px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .hero-slogan {
   font-size: clamp(1.15rem, 2.5vw, 1.55rem);
   color: var(--gold-light);
@@ -525,6 +530,13 @@ svg { display: block; }
   border-radius: 20px;
   clip-path: inset(0% 0 0 0);
 }
+.signature-media .signature-price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 .signature-index {
   font-family: var(--font-title);
   font-style: italic;
@@ -549,8 +561,13 @@ svg { display: block; }
 .signature-price {
   font-family: var(--font-title);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--gold-light);
+  background: rgba(8, 6, 5, 0.72);
+  border: 1px solid var(--line-gold);
+  backdrop-filter: blur(6px);
+  padding: 10px 26px;
+  border-radius: 50px;
 }
 .tag {
   background: var(--surface-2);
@@ -598,14 +615,20 @@ svg { display: block; }
   opacity: 0.5;
 }
 .carte-row.is-active { opacity: 1; }
-.carte-row h3 {
-  font-size: 1.4rem;
-  color: var(--text);
+.carte-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 8px;
   transform: translateY(12px);
   transition: transform 0.5s var(--ease-out);
 }
-.carte-row.is-active h3 { transform: translateY(0); }
+.carte-row.is-active .carte-row-head { transform: translateY(0); }
+.carte-row h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+}
 .carte-row p { color: var(--text-dim); margin-bottom: 12px; max-width: 440px; font-family: var(--font-body); }
 .carte-row .price { font-family: var(--font-title); font-style: italic; color: var(--gold-light); font-size: 1.15rem; }
 .menu-note {
@@ -821,12 +844,10 @@ svg { display: block; }
 .footer-logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.7rem;
-  margin-bottom: 16px;
   justify-content: center;
+  margin-bottom: 16px;
 }
-.footer-logo svg { width: 22px; height: 22px; color: var(--ember); }
+.footer-logo-img { height: 34px; width: auto; }
 .footer-legal { font-size: 0.78rem; margin-top: 8px; opacity: 0.85; }
 
 /* ============================================================

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viaboni – Pizzeria napolitaine au feu de bois à Sannois</title>
+<title>Viaboni – Pizzas &amp; Panozzis au feu de bois à Sannois</title>
 <meta name="description" content="Viaboni, pizzeria napolitaine artisanale au four à bois à Sannois. Pizzas et panozzis halal, faits maison. Sur place, à emporter, livraison.">
-<meta property="og:title" content="Viaboni – Pizzeria napolitaine au feu de bois à Sannois">
+<meta property="og:title" content="Viaboni – Pizzas &amp; Panozzis au feu de bois à Sannois">
 <meta property="og:description" content="Pizzas et panozzis napolitains 100% halal, faits maison, cuits au four à bois à Sannois.">
 <meta property="og:locale" content="fr_FR">
 <link rel="stylesheet" href="css/style.css">
@@ -36,8 +36,7 @@
 <header class="site-header" id="header">
   <div class="nav-pill">
     <a href="#hero" class="logo">
-      <svg class="logo-flame-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3-2 4-2 7a2 2 0 0 0 4 0c2 1 3 3 3 5a5 5 0 0 1-10 0c0-3 1.5-4.5 3-6.5C11 6 11 4 12 2z"/></svg>
-      <span class="logo-text">VIABONI</span>
+      <img src="assets/logo-viaboni.png" alt="Viaboni" class="logo-img">
     </a>
     <nav class="main-nav" id="main-nav">
       <a href="#signatures">Signatures</a>
@@ -71,8 +70,8 @@
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <p class="section-label light" data-hero-el>Pizzeria napolitaine · Sannois</p>
-    <h1 class="hero-logo line-mask"><span class="line-inner">VIAB<span class="logo-flame">🔥</span>NI</span></h1>
-    <p class="hero-slogan" data-hero-el>La vraie pizza napolitaine au feu de bois, à Sannois</p>
+    <h1 class="hero-logo line-mask"><span class="line-inner"><img src="assets/logo-viaboni.png" alt="Viaboni" class="hero-logo-img"></span></h1>
+    <p class="hero-slogan" data-hero-el>Pizzas &amp; Panozzis napolitains au feu de bois, à Sannois</p>
     <div class="hero-badges">
       <span class="badge" data-hero-el>★ 4,7 sur 101 avis Google</span>
       <span class="badge" data-hero-el>100% Halal</span>
@@ -110,35 +109,38 @@
   </div>
 
   <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Viaboni Spéciale"></div>
+    <div class="signature-media placeholder-photo" data-label="Photo Viaboni Spéciale">
+      <span class="signature-price">13 €</span>
+    </div>
     <div class="signature-info">
       <span class="signature-index">01</span>
       <h3>Viaboni Spéciale</h3>
       <p>Sauce tomate, mozzarella, viande hachée halal, poivrons, olives — la recette signature de la maison.</p>
       <div class="tags"><span class="tag">Halal</span><span class="tag">Signature</span></div>
-      <span class="signature-price">13 €</span>
     </div>
   </article>
 
   <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Margherita"></div>
+    <div class="signature-media placeholder-photo" data-label="Photo Margherita">
+      <span class="signature-price">9 €</span>
+    </div>
     <div class="signature-info">
       <span class="signature-index">02</span>
       <h3>Margherita</h3>
       <p>Sauce tomate, mozzarella, basilic frais — le grand classique napolitain, sans artifice.</p>
       <div class="tags"><span class="tag">Fait maison</span></div>
-      <span class="signature-price">9 €</span>
     </div>
   </article>
 
   <article class="signature-item fold-3d">
-    <div class="signature-media placeholder-photo" data-label="Photo Panozzi maison"></div>
+    <div class="signature-media placeholder-photo" data-label="Photo Panozzi maison">
+      <span class="signature-price">6,50 €</span>
+    </div>
     <div class="signature-info">
       <span class="signature-index">03</span>
       <h3>Panozzi maison</h3>
       <p>Pain artisanal cuit au feu de bois, garniture jambon et crudités, servi à l'italienne, froid, pour révéler la fraîcheur des produits.</p>
       <div class="tags"><span class="tag">Halal</span><span class="tag">Spécialité</span></div>
-      <span class="signature-price">6,50 €</span>
     </div>
   </article>
 </section>
@@ -158,22 +160,28 @@
       </div>
       <div class="carte-list">
         <article class="carte-row is-active" data-target="reine">
-          <h3>Reine</h3>
+          <div class="carte-row-head">
+            <h3>Reine</h3>
+            <span class="price">11 €</span>
+          </div>
           <p>Sauce tomate, mozzarella, jambon, champignons</p>
           <div class="tags"><span class="tag">Halal</span></div>
-          <span class="price">11 €</span>
         </article>
         <article class="carte-row" data-target="veggie">
-          <h3>Végétarienne feu de bois</h3>
+          <div class="carte-row-head">
+            <h3>Végétarienne feu de bois</h3>
+            <span class="price">12 €</span>
+          </div>
           <p>Sauce tomate, mozzarella, aubergines et poivrons grillés, champignons</p>
           <div class="tags"><span class="tag">Fait maison</span><span class="tag">Végétarien</span></div>
-          <span class="price">12 €</span>
         </article>
         <article class="carte-row" data-target="fromages">
-          <h3>4 Fromages</h3>
+          <div class="carte-row-head">
+            <h3>4 Fromages</h3>
+            <span class="price">12 €</span>
+          </div>
           <p>Mozzarella, chèvre, emmental, bleu</p>
           <div class="tags"><span class="tag">Fait maison</span></div>
-          <span class="price">12 €</span>
         </article>
       </div>
     </div>
@@ -360,8 +368,7 @@
   <div class="checker-strip"></div>
   <div class="container footer-inner">
     <div class="footer-logo">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3-2 4-2 7a2 2 0 0 0 4 0c2 1 3 3 3 5a5 5 0 0 1-10 0c0-3 1.5-4.5 3-6.5C11 6 11 4 12 2z"/></svg>
-      <span>VIABONI</span>
+      <img src="assets/logo-viaboni.png" alt="Viaboni" class="footer-logo-img">
     </div>
     <p>22 bis Boulevard Maurice Berteaux, 95110 Sannois &middot; <a href="tel:0745314249">07 45 31 42 49</a></p>
     <p class="footer-legal">Pizzeria napolitaine au feu de bois &mdash; Pizzas et panozzis 100% halal &middot; © <span id="year"></span> Viaboni. Tous droits réservés.</p>

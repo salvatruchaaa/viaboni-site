@@ -38,8 +38,8 @@
   --shadow-dark: 0 20px 50px rgba(42, 15, 8, 0.35);
 
   /* Type */
-  --font-title: 'Playfair Display', serif;
-  --font-body: 'Manrope', sans-serif;
+  --font-title: 'League Spartan', sans-serif;
+  --font-body: 'League Spartan', sans-serif;
 
   /* Easing */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -352,6 +352,11 @@ svg { display: block; }
     linear-gradient(160deg, #631B0C 0%, #4A1409 55%, #2A0F08 100%);
   will-change: transform;
 }
+.hero-bg.has-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -374,7 +379,6 @@ svg { display: block; }
   margin: 0 auto 28px;
   font-weight: 500;
   font-family: var(--font-title);
-  font-style: italic;
   opacity: 0;
   filter: blur(6px);
 }
@@ -459,7 +463,6 @@ svg { display: block; }
 .philosophy-content { position: relative; z-index: 2; text-align: center; padding: 100px 24px; }
 .philosophy-quote {
   font-family: var(--font-title);
-  font-style: italic;
   font-weight: 600;
   font-size: clamp(1.5rem, 3.6vw, 2.6rem);
   color: var(--text);
@@ -574,7 +577,6 @@ svg { display: block; }
 }
 .signature-index {
   font-family: var(--font-title);
-  font-style: italic;
   color: var(--line-hover);
   font-size: 3.2rem;
   line-height: 1;
@@ -595,7 +597,6 @@ svg { display: block; }
 .signature-info .tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
 .signature-price {
   font-family: var(--font-title);
-  font-style: italic;
   font-size: 1.6rem;
   color: var(--gold-light);
   background: rgba(42, 15, 8, 0.72);
@@ -644,7 +645,6 @@ svg { display: block; }
 .carte-list { display: flex; flex-direction: column; }
 .carte-category-title {
   font-family: var(--font-title);
-  font-style: italic;
   color: var(--gold-light);
   font-size: 1.1rem;
   margin: 40px 0 4px;
@@ -675,7 +675,7 @@ svg { display: block; }
   color: var(--text);
 }
 .carte-row p { color: var(--text-dim); margin-bottom: 12px; max-width: 440px; font-family: var(--font-body); }
-.carte-row .price { font-family: var(--font-title); font-style: italic; color: var(--gold-light); font-size: 1.15rem; }
+.carte-row .price { font-family: var(--font-title); color: var(--gold-light); font-size: 1.15rem; }
 .menu-note {
   text-align: center;
   margin-top: 48px;
@@ -773,7 +773,6 @@ svg { display: block; }
 }
 .rating-score {
   font-family: var(--font-title);
-  font-style: italic;
   font-size: 3.2rem;
   color: var(--gold);
 }
@@ -800,7 +799,6 @@ svg { display: block; }
 .review-quote-mark {
   color: var(--line-hover);
   font-family: var(--font-title);
-  font-style: italic;
   font-size: 2.4rem;
   line-height: 1;
   display: block;
@@ -822,7 +820,7 @@ svg { display: block; }
   font-family: var(--font-title);
   flex-shrink: 0;
 }
-.review-card p { font-size: 0.92rem; color: var(--text-dim); font-style: italic; }
+.review-card p { font-size: 0.92rem; color: var(--text-dim); }
 
 /* ============================================================
    HISTOIRE
@@ -851,10 +849,13 @@ svg { display: block; }
 .info-block h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text); font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
 .info-block p, .info-block a { color: var(--text-dim); }
 .info-block a:hover { color: var(--text); }
+.hours-list { display: flex; flex-direction: column; gap: 4px; }
+.hours-list li { display: flex; gap: 14px; font-size: 0.92rem; }
+.hours-list li span:first-child { color: var(--text); font-weight: 600; width: 108px; flex-shrink: 0; }
+.hours-list li span:last-child { color: var(--text-dim); }
 .placeholder-text {
   color: var(--ember);
   font-size: 0.82rem;
-  font-style: italic;
 }
 .socials { display: flex; gap: 14px; }
 .socials a {
